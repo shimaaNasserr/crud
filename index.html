@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <!-- <div class="container">
+    <div class="row" id="myrow">
+        
+    </div>
+</div> -->
+    <!-- <div class="container">
+    <input type="text" class="form-control my-3" id="userName" placeholder="Type Your Name">
+    <button onclick="welcome()" class="btn btn-info">send</button>
+    <h2 class="text-center my-2" id="myh1"> </h2>
+</div>
+<select id="selectProduct">
+   
+</select> -->
+
+    <div class="container py-3">
+      <form>
+        <div class="mb-2">
+          <label for="productname">Product Name</label>
+          <input
+            type="text"
+            placeholder="enter product name"
+            id="productname"
+            class="form-control mt-1"
+          />
+          <p id="alertName1" class="alert alert-danger " style="display: none;">this name is already exist</p>
+          <p id="alertName2" class="alert alert-danger d-none " >Enter a Valid Name "must start with a capital litter and min char is 3"!</p>
+        </div>
+        <div class="mb-2">
+          <label for="productprice">Product Price</label>
+          <input
+            type="number"
+            placeholder="enter product price"
+            id="productprice"
+            class="form-control mt-1"
+          />
+          <p id="alertPrice" class="alert alert-danger d-none " >Enter a Valid Price!</p>
+        </div>
+        <div class="mb-2">
+          <label for="producttype">Product Category</label>
+         <select class="form-select" id="producttype">
+            <option value="tv">tv</option>
+            <option value="nokia">nokia</option>
+            <option value="iphone">iphone</option>
+            <option value="oppo">oppo</option>
+         </select>
+        </div>
+        <div class="mb-2">
+          <label for="productdesc">Product Description</label>
+          <textarea
+            placeholder="enter product description"
+            id="productdesc"
+            class="form-control mt-1"></textarea>
+         
+        </div>
+        <button id="addProduct" type="button" class="btn btn-outline-info" onclick="addproduct()">Add Product</button>
+        <button id="addEdit" type="button" class="btn btn-outline-info" style="display: none;" onclick="editProduct()">Add Edit</button>
+        <button type="button" class="btn btn-outline-danger" onclick="clearForm()">Clear form</button>
+      </form>
+    </div>
+    <div class="container">
+        <input  type="text" id="searchh" placeholder="search..." class="form-control w-50 mx-auto my-5 " onkeyup="searchProduct()">
+    </div>
+    <div class="container mb-5"> 
+        <table class="table table-bordered table-hover text-center ">
+            <thead>
+                <tr>
+                    <th>index</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Category</th>
+                    <th>Product Description</th>
+                    <th>Update</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+            <tbody  id="demo">
+               
+              
+            </tbody>
+        </table>
+    </div>
+   
+   <span></span>
+  
+    
+    <script src="js/main.js"></script>
+  </body>
+</html>
